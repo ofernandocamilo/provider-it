@@ -1,0 +1,218 @@
+@media only screen and (max-width: 1200px){
+	header.style{
+		#mainnav{
+			ul.menu{
+				li{
+					display: inline-block;
+					margin-right: 35px;
+				}
+			}
+		}
+	}
+
+	.main-services{
+		.post{
+			height: auto;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 991px){
+	.owl-nav{
+		display: none;
+	}
+
+	.fa-caret-down:before {
+		display: none;
+	}
+
+	header .mobile-button {
+		display: block;
+	}
+
+	.header-wrap-conteudo {
+		background-color: #fcfcfc;
+		padding: 20px 0 35px;
+
+		.header-top{
+			.header-top-info{
+				display: none;
+			}
+
+			.header-top-logo{
+				float: none;
+				display: table-cell;
+				vertical-align: middle;
+				width: 100%;
+
+				img{
+					float: none;
+					display: block;
+					margin: auto;
+				}
+			}
+		}
+	}
+
+	.btn-submenu {
+		height: 60px;
+		line-height: 60px;
+	}
+
+	header.style{
+		.header-wrap {
+			height: 50px;
+		}
+	} 
+
+	.top-bar{
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	#wgt1, #wgt2, #wgt3{
+		display: none;
+	}
+	.text-top {
+		padding-top: 30px;
+	}
+}
+
+@media only screen and (max-width: 575px){
+	#section-about {
+		padding: 20px 0;
+	}
+
+	#txt_box_wrap{
+		display: none;
+	}
+
+	.page-title.style{
+		.page-title-heading h1 {
+			font-size: 30px;
+			padding: 0 25px;
+			line-height: 50px;
+		}
+		.wrap-page-title {
+			padding: 60px 0 30px;
+		}
+	}
+
+	.title-section {
+		text-align: center;
+	}
+
+	#img-about{
+		width: 80%;
+		display: block;
+		margin: auto;
+	}
+
+	%pdg_about{
+		padding: 10px 10px 40px 10px;
+	}
+
+	%icon{
+		font-size: 3.5em;
+		display: block;
+		margin: auto;
+		text-align: center;
+	}
+
+	%h6_about{
+		font-size: 1.3em;
+		text-align: center;
+	}
+
+	%span_about{
+		font-size: 1.1em;
+		text-align: center;
+		display: block;
+		margin: auto;
+		padding: 0 15px;
+	}
+
+	#missao_wrap_content {
+		.missao_wrap{
+			@extend %pdg_about;
+
+			i{
+				@extend %icon;
+			}
+
+			h6{
+				@extend %h6_about;	
+			}
+
+			span{
+				@extend %span_about;
+			}
+		}
+
+		.visao_wrap{
+			@extend %pdg_about;
+
+			i{
+				@extend %icon;
+			}
+
+			h6{
+				@extend %h6_about;	
+			}
+			span{
+				@extend %span_about;
+			}
+		}
+
+		.valores_wrap{
+			@extend %pdg_about;
+
+			i{
+				@extend %icon;
+			}
+
+			h6{
+				@extend %h6_about;	
+			}
+
+			span{
+				@extend %span_about;
+			}
+		}
+
+	}
+
+	.text-top {
+		font-size: 1.1em;
+		line-height: 25px;
+	}
+
+	#section-about{
+		padding: 25px 0;
+	}
+
+	.flat-company .flat-carousel-box {
+		padding: 50px 0;
+	}
+
+	.widget-menu{
+		text-align: center;
+	}
+
+	footer.style .widget-social ul li {
+		display: inline-block;
+		float: none;
+		margin-right: 28px;
+	}
+
+	.bottom-footer{
+		display: none;
+	}
+}
+
+
+
+
+

@@ -1,0 +1,114 @@
+//Ofertas
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+	font-family: Flaticon;
+	font-size: 60px;
+	margin-left: 5px;
+	color: #b3c8d9;
+}
+
+.main-services {
+	padding: 0;
+	background: $branco;
+
+	.post{
+		height: 675px;
+		border-radius: 5px;
+		overflow: hidden;
+		margin-bottom: 30px;
+		@include sombra (0.05);
+
+		&:hover{
+			@include sombra (0.09);	
+		}
+
+		.featured-post{
+			position: relative;
+			background: $cinza-branco;
+
+			.icon-wrap{
+				width: 90px;
+				height: 90px;
+				background-color: $azul;
+				border-radius: 4px;
+				position: relative;
+				left: 50px;
+				bottom: -40px;
+				font-size: 37px;
+				color: #fff;
+				@include box-transition(all 0.3s ease-in-out);
+
+				span{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+
+		.content-post{
+			padding: 75px 48px 39px 48px;
+			background: #fff;
+			height: auto;
+
+			ul{
+				padding: 20px 0;
+			}
+
+			ul li{
+				padding: 5px 0;	
+			}
+
+			i{
+				color: $azul;
+				padding-right: 5px;
+			}
+
+			h3{
+				font-family: $font-auxiliar;
+				font-size: 24px;
+				line-height: 30px;
+				font-weight: 500;
+				margin-bottom: 15px;
+				text-transform: uppercase;
+
+				a{
+					color: $azul-escuro;
+					font-weight: 700;
+
+					&:hover{
+						color: $vermelho;
+					}
+				}
+			}
+
+			p{
+				font-family: $font-auxiliar;
+				font-size: 16px;
+				line-height: 30px;
+				font-weight: 400;
+				color: #666d81;
+				margin-bottom: 24px;
+				display: inline;	
+			}
+
+			h4{
+				position: relative;
+
+				a{
+					font-family: $font-auxiliar;
+					font-size: 14px;
+					line-height: 30px;
+					font-weight: 700;
+					color: $vermelho;
+					letter-spacing: 3px;
+
+					&:hover{
+						color: $azul-escuro;
+					}
+				}
+			}
+		}
+	}
+}

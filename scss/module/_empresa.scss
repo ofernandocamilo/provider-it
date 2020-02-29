@@ -1,0 +1,111 @@
+#section-about{
+	padding: 60px 0;
+}
+
+.main-about {
+	padding: 0;
+
+	.flat-company{
+		.flat-carousel-box{
+			padding: 117px 0;
+		}
+	}
+}
+
+#missao_wrap_content{
+	%pdg{
+		padding: 10px 0 0 10px;
+	}
+
+	%h6{
+		font-weight: 700;
+		font-size: 1em;
+	}
+
+	%i{
+		font-size: 2.6em;
+		color: $vermelho;
+		padding: 20px 0;
+	}
+
+	%span{
+		font-size: 0.9em;
+	}
+
+	.missao_wrap{
+		@extend %pdg;
+
+		h6{
+			@extend %h6;
+		}
+
+		i{
+			@extend %i;
+		}
+
+		span{
+			@extend %span;
+		}
+	}
+
+	.visao_wrap{
+		@extend %pdg;
+
+		h6{
+			@extend %h6;
+		}
+
+		i{
+			@extend %i;
+		}
+
+		span{
+			@extend %span;
+		}
+	}
+
+	.valores_wrap{
+		@extend %pdg;
+
+		h6{
+			@extend %h6;
+		}
+
+		i{
+			@extend %i;
+		}
+
+		span{
+			@extend %span;
+		}
+	}
+}
+
+
+.flat-company {
+	margin-top: 50px;
+	text-align: center;
+
+	.flat-carousel-box{
+		padding: 117px 0;
+	}
+
+	.image{
+		img{
+			opacity: 0.6;
+			width: 130px;
+			@include box-transition(all 0.3s ease-in-out);
+			@include grayscale(100%);
+			@include transition(.5s);
+			filter: gray;
+
+			&:hover{
+				opacity: 1;
+				@include box-transition(all 0.3s ease-in-out);
+				@include grayscale(0%);
+				@include transition(.5s);
+				filter: none;
+			}
+		}
+	}
+}

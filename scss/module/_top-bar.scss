@@ -1,0 +1,117 @@
+//Top Bar
+
+%top-bar{
+	background-color: $azul-escuro;
+	padding: 0;
+	border-bottom: 1px solid #1f2945;
+	height: 45px;
+}
+
+
+.top-bar {
+	@extend %top-bar;
+}
+
+.top-bar-conteudo {
+	@extend %top-bar;
+	display: table;
+	text-align: left;
+	float: left;
+
+	h5{
+		color: $cinza-azulado;
+		font-family: $font-auxiliar;
+		font-size: 14px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+.top-bar-idioma {
+	@extend %top-bar;
+	display: table;
+	text-align: right;
+	float: right;
+
+	.wrap-idioma{
+		margin-left: 15px;
+		color: #b6bbcc;
+		cursor: pointer;
+		position: relative;
+		z-index: 99999;
+		display: table-cell;
+		vertical-align: middle;
+
+		&:hover .selecionar-idioma{
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	.nome-idioma {
+		font-size: 14px;
+		color:#fff;
+
+		&:after{
+			content: "\f0d7 ";
+			font-family: 'FontAwesome';
+			margin-left: 1px;
+			font-size: 12px;
+		}
+	}
+
+	.selecionar-idioma {
+		text-align: left;
+		background: #fff;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		list-style-type: none;
+		margin: 0;
+		visibility: hidden;
+		opacity: 0;
+		width: 160px;
+		padding: 20px;
+		z-index: 99;
+		@include box-shadow-idioma (0px 1px 16px 0px rgba(19, 29, 59, 0.5));
+		@include box-transition(all 0.3s ease-in-out);
+	}
+
+	.selecionar-idioma li {
+		margin-bottom: 10px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		a{
+			color: $azul-escuro;
+
+			&:hover{
+				color: $vermelho;
+			}
+		}
+	}
+
+	.social-media{
+		display: table-cell;
+		vertical-align: middle;
+		padding-right: 10px;
+
+		ul li{
+			display: inline-block;
+			float: left;
+			margin-right: 28px;
+
+			a{
+				color: $branco;
+
+				&:hover{
+					color: $azul-claro;
+				}
+
+			}
+		}
+	}
+
+}

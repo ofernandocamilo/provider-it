@@ -1,0 +1,170 @@
+//Header
+.header-wrap-conteudo{
+	background-color: $cinza-claro;
+	padding: 35px 0 70px;
+
+	.header-top{
+		position: relative;
+		display: table;
+		width: 100%;
+
+		.header-top-logo{
+			float: left;
+			display: table-cell;
+			vertical-align: middle;
+
+			img{
+				float: left;
+				display: inline-block;
+				margin-right: 0;
+				margin-top: 0;
+				width: 250px;
+			}
+
+			ul{
+				display: inline-block;
+				margin: 8px 0 0 19px;
+
+				li{
+					float: left;
+					display: inline-block;
+					margin-right: 28px;
+
+					i{
+						color: #b6bbcc;
+
+						&:hover{
+							color: #ff4f01;
+						}
+					}
+				}
+			}
+		}
+
+		.header-top-info{
+			float: right;
+			display: table-cell;
+			vertical-align: middle;
+
+			ul li{
+				float: left;
+				display: inline-block;
+			}
+
+			.visit{
+				margin-left: 40px;
+			}
+
+			.phone{
+				margin-left: 54px;
+			}
+
+			%header-text{
+				font-family: $font-auxiliar;
+				font-size: 12px;
+				line-height: 20px;
+				letter-spacing: 2px;
+				font-weight: 700;
+				color: $azul-escuro;
+			}
+
+			.header-text h2{
+				@extend %header-text;
+			}
+
+			.header-text h3{
+				@extend %header-text;
+			}
+
+			.header-text h4{
+				@extend %header-text;
+
+				a{
+					@extend %header-text;
+
+					&:hover{
+						color: #ff4f01;
+						text-decoration: none;
+					}
+				}
+			}
+
+			.header-text h5{
+				margin-top: -2px;
+
+				a{
+					font-family: $font-auxiliar;
+					font-size: 16px;
+					line-height: 20px;
+					font-weight: 400;
+					color: $cinza-escuro;
+
+					&:hover{
+						color: $vermelho;
+					}
+				}
+			}
+		}
+
+		.header-icon{
+			float: left;
+			display: inline-block;
+			margin-right: 20px;
+
+			i{
+				color: $vermelho;
+				font-size: 1.2em;
+			}
+		}
+
+		.header-text{
+			display: inline-block;
+		}
+	}
+}
+
+header.style.fixed-header .header-wrap {
+	bottom: unset;
+}
+
+header.fixed-header {
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	z-index: 3;
+}
+
+header.style{
+	.header-wrap{
+		height: 78px;
+		background-color: #ac0000;
+		border-radius: 0;
+		position: absolute;
+		bottom: -38px;
+		margin-bottom: 0;
+		width: 100%;
+		left: 0;
+		z-index: 9999;
+		@include box-transition(all 0.3s ease-in-out);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	}
+
+	.nav-wrap{
+		float: left;
+		display: table-cell;
+
+		ul.menu li {
+			position: relative;
+			padding: 24px 0;
+		}
+	}
+
+	#mainnav ul.menu{
+		margin-left: 48px;
+
+		li{
+			display: inline-block;
+			margin-right: 69px;
+		}
+	}
+}

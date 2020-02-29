@@ -1,0 +1,97 @@
+//Footer
+
+%hr{
+	content: '';
+	position: absolute;
+	top: -1px;
+	height: 1px;
+	width: 20px;
+	background-color: $vermelho;
+}
+
+.footer{
+	width: 100%;
+}
+
+footer.style {
+	background-color: $azul-escuro;
+	padding: 50px 0 0 0;
+	@include box-shadow-idioma (0px 1px 16px 0px rgba(19, 29, 59, 0.5));
+
+	.widget-menu{
+		img{
+			padding-bottom: 35px;
+		}
+
+		h2{
+			font-family: $font-auxiliar;
+			font-size: 24px;
+			font-weight: 400;
+			color: #fff;
+
+			a{
+				font-family: $font-auxiliar;
+				font-size: 0.8em;
+				line-height: auto;
+				font-weight: 400;
+				color: #fff;
+			}
+		}
+
+		ul{
+			margin-top: 21px;
+		}
+
+		ul li{
+			display: block;
+			font-family: $font-auxiliar;
+			font-size: 0.9em;
+			line-height: 40px;
+			font-weight: 400;
+			color: $branco;
+			@include box-transition(all 0.3s ease-in-out);
+
+			a{
+				font-family: $font-auxiliar;
+				font-size: 0.9em;
+				line-height: 40px;
+				font-weight: 400;
+				color: $branco;
+				@include box-transition(all 0.3s ease-in-out);
+
+				&:hover{
+					color: $azul-claro;
+					margin-left: 5px;
+				}
+			}
+		}
+
+		ul li span{
+			font-weight: 700;
+		}
+
+		ul li small{
+			padding-left: 5px;
+		}
+
+	}
+
+	.widget-social ul{
+		margin-top: 20px;
+
+		li{
+			display: inline-block;
+			float: left;
+			margin-right: 28px;	
+
+			a{
+				font-size: 16px;
+
+				&:hover{
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+}

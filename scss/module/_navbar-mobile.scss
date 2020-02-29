@@ -1,0 +1,259 @@
+//Navbar Mobile
+
+#mainnav-mobi {
+	display: none;
+	margin: 0 auto;
+	width: 100%;
+	position: absolute;
+	background-color: #222222;
+	z-index: 1000;
+	top:100%;
+	left: 0;
+
+	ul{
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	ul li{
+		margin:0;
+		position: relative;
+		text-align: left;
+		border-top: 1px solid #333;
+		cursor: pointer;
+		padding: 10px 0;
+
+		a{
+			text-decoration: none;
+			height: 50px;
+			line-height: 45px;
+			padding: 0 15px;
+			color: $branco;
+			font-size: 1.3em;
+			font-weight: 300;
+		}
+	}
+
+	ul.sub-menu{
+		top: 100%;
+		left: 0;
+		z-index: 2000;
+		position: relative;
+		background-color: #333;
+		width: 100%;
+		padding-left: 25px;
+		opacity: 1;
+		visibility: visible;
+		@include box-transition(all 0s ease-in-out);
+
+		li{
+			a{
+				font-size: 1.2em;
+				display: block;
+				text-decoration: none;
+				border-top-color: rgba(255,255,255,.1);
+				@include box-transition(all 0.3s ease-in-out);
+			}
+		}
+	}
+
+	ul li {
+		position: relative;
+		border-top: 1px solid #333;
+
+		&:first-child a{
+			border-top: none;
+		}
+		a{
+			&:hover{
+				color: $branco;
+			}
+		}
+	}
+}
+
+.wrap-canvas-menu {
+	position: fixed;
+	height: 100%;
+	width: 260px;
+	padding-top: 44px;
+	top: 0;
+	bottom: 0;
+	font-size: .9em;
+	left: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	z-index: 999999;
+	background-color: #222222;
+	color: $branco;
+	-webkit-overflow-scrolling: touch;
+	-webkit-transform: translate(-260px);
+	transform: translate(-260px);
+	transition: transform 0.3s ease-in-out 0s;
+}
+
+body.canvas-mb-active .wrap-canvas-menu {
+	transition: transform 0.3s ease-in-out 0s;
+	z-index: 999999;
+	-webkit-transform: translate(0px);
+	transform: translate(0px);
+}
+
+.wrap-canvas-menu .side-nav-panel-close {
+	display: block;
+	color: $branco;
+	position: absolute;
+	top: 10px;
+	right: 14.5px;
+	text-align: center;
+	text-decoration: none;
+	padding: 4px 8px;
+	line-height: 1em;
+}
+
+.panel-overlay {
+	opacity: 0;
+}
+
+body.canvas-mb-active{
+	.panel-overlay{
+		background: #000;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 8999;
+		min-height: 100vh;
+		opacity: .35;
+		transition: opacity 0.3s ease-in-out 0s;
+	}
+}
+
+#nav-mobi{
+	ul li {
+		position: relative;
+
+		a{
+			padding-left: 20px;
+			line-height: 40px;
+			height: 40px;
+			color: $branco;
+		}
+	}
+
+	.btn-submenu{
+		height: 40px;
+		line-height: 40px;
+	}
+
+	ul.sub-menu{
+		background-color: #333;
+
+		li{
+			padding-left: 20px;
+		}
+	}
+}
+
+.btn-submenu {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font: 20px/50px 'FontAwesome';
+	text-align: center;
+	cursor: pointer;
+	width: 70px;
+	height: 44px;
+	@include box-transition(all 0.3s ease-in-out);
+
+	.active{
+		transform: rotate(-180deg);
+	}
+
+	&:before{
+		content: "\f107";
+		color: $branco;
+	}
+}
+
+.mobile-button {
+	display: none;
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	float: right;
+	top: 50%;
+	right: 15px;
+	z-index: 1;
+	background-color: transparent;
+	cursor: pointer;
+	@include box-transition(all 0.3s ease-in-out);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+
+	&:before, &:after, span{
+		background-color:$branco;
+		-webkit-transition:all ease 0.3s;
+		-moz-transition:all ease 0.3s;
+		transition:all ease 0.3s;
+	}
+
+	&:before, &:after{
+		content:'';
+		position:absolute;
+		top:0;
+		height:3px;
+		width:100%;
+		left:0;
+		top:50%;
+		-webkit-transform-origin:50% 50%;
+		-ms-transform-origin:50% 50%;
+		transform-origin:50% 50%;
+	}
+
+	&:before{
+		-webkit-transform:translate3d(0,-7px,0);
+		-moz-transform:translate3d(0,-7px,0);
+		transform:translate3d(0,-7px,0);
+	}
+
+	&:after{
+		-webkit-transform:translate3d(0,7px,0);
+		-moz-transform:translate3d(0,7px,0);
+		transform:translate3d(0,7px,0);
+	}
+
+	span{
+		position:absolute;
+		width:100%;
+		height:3px;
+		left:0;
+		top:50%;
+		overflow:hidden;
+		text-indent:200%;
+	}
+
+	.active{
+
+		&:before{
+			-webkit-transform:rotate3d(0,0,1,45deg);
+			-moz-transform:rotate3d(0,0,1,45deg);
+			transform:rotate3d(0,0,1,45deg);
+		}
+
+		&:after{
+			-webkit-transform:rotate3d(0,0,1,-45deg);
+			-moz-transform:rotate3d(0,0,1,-45deg);
+			transform:rotate3d(0,0,1,-45deg);
+		}
+
+		span{
+			opacity:0;
+		}
+	}
+}
