@@ -12,4 +12,4 @@ Links para as páginas:
 
 **EMPRESA:** [https://provider-it.com.br/empresa/](https://provider-it.com.br/empresa/)
 
-**OFERTAS:** [https://provider-it.com.br/o-que-oferecemos-para-o-mercado/](hhttps://provider-it.com.br/o-que-oferecemos-para-o-mercado/)
+**OFERTAS:** [https://provider-it.com.br/o-que-oferecemos-para-o-mercado/](https://provider-it.com.br/o-que-oferecemos-para-o-mercado/)
